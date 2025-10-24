@@ -103,9 +103,6 @@ main {
 }
 
 @media (min-width: 981px) {
-  .center {
-    height: 100vh;
-  }
   .card {
     max-width: 980px;
     display: grid;
