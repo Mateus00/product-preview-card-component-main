@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.pad-bottom {
+  padding-bottom: 2rem;
+}
+
+main {
+  width: 100%;
+  padding: 5rem 1rem;
+  background: hsl(0, 0%, 100%);
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: hsl(30, 38%, 92%);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.description {
+  padding: 0 2rem;
+}
+
+.product-type {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: hsl(228, 12%, 48%);
+}
+
+.title {
+  font-family: "Fraunces", "sans-serif";
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+}
+
+.desciption-text {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: start;
+  word-wrap: break-word;
+  color: hsl(228, 12%, 48%);
+}
+
+.price {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.price h1 {
+  font-family: "Fraunces", "sans-serif";
+  font-size: 2.8rem;
+  color: hsl(158, 36%, 37%);
+}
+
+.price h3 {
+  font-family: "Montserrat", "sans-serif";
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.card-action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 8px;
+  padding: 1.4rem 1rem; /* Altura e espaço interno */
+  color: white;
+  cursor: pointer;
+  font-family: "Montserrat", "sans-serif";
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card-action img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+@media (min-width: 981px) {
+  .center {
+    height: 100vh;
+  }
+  .card {
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card img {
+    height: 100%;
+    padding-bottom: 0;
+  }
+  .description {
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3rem;
+  }
+  .product-type {
+    font-size: 1.2rem;
+    letter-spacing: 6px;
+  }
+  .title {
+    font-size: 3.3rem;
+  }
+  .desciption-text {
+    font-size: 1.5rem;
+  }
+  .price h1 {
+    font-size: 3rem;
+  }
+  .price h3 {
+    font-size: 1.2rem;
+  }
+  .card-action {
+    font-size: 1.5rem;
+  }
+  .card-action img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
