@@ -14,19 +14,21 @@
 }
 
 main {
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 99vh;
   padding: 5rem 1rem;
   background: hsl(0, 0%, 100%);
 }
 
 .card {
+  display: grid;
+  grid-template-columns: 1fr;
   border-radius: 16px;
   overflow: hidden;
   background: hsl(30, 38%, 92%);
 }
 
-.card img {
+.card-img {
   width: 100%;
   height: auto;
   display: block;
@@ -38,7 +40,7 @@ main {
 
 .product-type {
   font-family: "Montserrat", "sans-serif";
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -47,7 +49,7 @@ main {
 
 .title {
   font-family: "Fraunces", "sans-serif";
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1;
   color: hsl(212, 21%, 14%);
@@ -55,7 +57,7 @@ main {
 
 .desciption-text {
   font-family: "Montserrat", "sans-serif";
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   text-align: start;
   word-wrap: break-word;
@@ -70,7 +72,7 @@ main {
 
 .price h1 {
   font-family: "Fraunces", "sans-serif";
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: hsl(158, 36%, 37%);
 }
 
@@ -91,8 +93,8 @@ main {
   background-color: hsl(158, 36%, 37%);
   border: none;
   border-radius: 8px;
-  padding: 1.4rem 1rem; /* Altura e espaço interno */
-  color: white;
+  padding: 1rem; /* Altura e espaço interno */
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
   font-family: "Montserrat", "sans-serif";
   font-weight: 700;
@@ -109,14 +111,17 @@ main {
   height: 1.2rem;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 480px) {
   .card {
-    max-width: 1024px;
-    display: grid;
+    max-width: 614px;
+    max-height: 572px;
     grid-template-columns: 1fr 1fr;
+    /* Define que a altura da linha se ajusta ao conteúdo */
+    grid-auto-rows: 1fr;
   }
-  .card img {
-    height: 100%;
+  .card-img {
+    min-height: 100%;     /* Mantém proporção */
+    object-fit: cover; /* Não corta nada */
     padding-bottom: 0;
   }
   .description {
@@ -124,30 +129,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 2.4rem 3rem;
+    padding: 2.4rem 2rem;
   }
   .product-type {
-    font-size: 1.5rem;
+    font-size: 1rem;
     letter-spacing: 6px;
-  }
-  .title {
-    font-size: 4rem;
-    font-weight: bold;
-  }
-  .desciption-text {
-    font-size: 1.6rem;
-  }
-  .price h1 {
-    font-size: 3.3rem;
-  }
-  .price h3 {
-    font-size: 1.6rem;
-  }
-  .card-action {
-    font-size: 1.6rem;
-  }
-  .card-action img {
-    width: 1.5rem;
-    height: 1.5rem;
   }
 }
